@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+        body
+        {
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container
+        {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background: #fff;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0, 0,0,0.1);
+        }
+        .container .left_side
+        {
+            position: relative;
+            background: #003147;
+            padding: 40px;
+        }
+        .profileText
+        {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .profileText .imgBx
+        {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .contact
+        {
+                padding-top: 60px;
+        }
+        .title
+        {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+        .contact ul
+        {
+            position: relative;
+        }
+        .contact ul li
+        {
+            position: relative;
+            list-style: none;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .contact ul li .icon
+        {
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+        .contact ul li span
+        {
+            color: #fff;
+            font-weight: 300;
+
+        }
+        .profileText .imgBx img
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+        }
+        .hobbies ul
+        {
+            display: grid;
+           
+        }
+        .hobbies ul li
+        {
+            list-style: none;
+            color: #fff;
+            font-weight: 500;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .hobbies ul li .fa
+        {
+            color: #03a9f4;
+            font-size: 18px;
+        }
+
+        
+        .container .right_side
+        {
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+        .about
+        {
+            margin-bottom: 50px;
+        }
+        .about:last-child
+        {
+            margin-bottom: 0;
+        }
+        .title2
+        {
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .p{
+            color: #333;
+        }
+        .language .box
+        {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .language .box h4
+        {
+            text-transform: uppercase;
+            color: #848c99;
+            font-weight: 500;
+        }
+        .language .box .percent
+        {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #f0f0f0;
+        }
+        .language .box .percent div
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        .education li
+        {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .education h5
+        {
+            color: #03a9f4;
+            font-weight: 500;
+            text-align: center;
+        }
+        .education h4:nth-child(2)
+        {
+            color: #000;
+            font-weight: 500;
+            text-align: center;
+        }
+        .education h4
+        {
+            color: #333;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        @media(max-width:1000px)
+        {
+            .container
+            {
+                margin: 10px;
+                grid-template-columns: repeat(1,1fr);
+            }
+            .hobbies ul
+            {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media(max-width:600px)
+        {
+            .language .box
+            {
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="left_side">
+                <div class="profileText">
+                    <div class="imgBx">
+                        <img src="img.jpg">
+                    </div>
+                    
+                </div>
+                <div class="contact">
+                    <h3 class="title">Contact Detail</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
+                            <span class="text">+91 9510500588</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                            <span class="text">amipatel42429@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </span>
+                            <span class="text">Ivnagar via Timbavadi,Junagadh</span>
+                        </li>
+                    </ul>
+                </div><br><br>
+                <div class="hobbies">
+                    <h2 class="title">hobbies</h2>
+                    <ul>
+                        <li>Listning Song</li>
+                        <li>Reading Story book</li>
+                        <li>Travelling</li>
+                    </ul>
+                </div>
+                
+               
+            </div>
+           
+            <div class="right_side">
+                <div class="about" >
+                    <h2 class="title2">About Me</h2>
+                    <p style="text-align: justify">Hello, my name is Mendapara Ami.I am Student of Master Computer Application.I study MCA in Noble College.I try my best to complete all work to given me with my all skills.</p>
+                </div><br><br>
+                <div class="language">
+                    <h2 class="title2">Languages</h2>
+                    <div class="box">
+                        <h4>HTML</h4>
+                        <div class="percent">
+                            <div style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>CSS</h4>
+                        <div class="percent">
+                            <div style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>C++</h4>
+                        <div class="percent">
+                            <div style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>Python</h4>
+                        <div class="percent">
+                            <div style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div><br><br><br><br>
+                <div class="education">
+                    <h3 class="title2">Education</h3>
+                    <ul>
+                        <li>
+                            <h5>10th</h5>
+                            <h4>Gujarat Board</h4>
+                            <h4>2017</h4>
+                            <h4>91.00 PR</h4>
+                        </li>
+                        <li>
+                            <h5>12th</h5>
+                            <h4>Gujarat Board</h4>
+                            <h4>2019</h4>
+                            <h4>96.40 PR</h4>
+                        </li>
+                        <li>
+                            <h5>BCA</h5>
+                            <h4>BKNMU</h4>
+                            <h4>2022</h4>
+                            <h4>71%</h4>
+                        </li>
+                        <li>
+                            <h5>MCA Continue...</h5>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+           
+            </div>
+    </body>
+</html>
